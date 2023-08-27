@@ -1,0 +1,20 @@
+<nav class="nav">
+  <div class="nav-wrapperLogo">
+      <span class="nav-textLogo">Abstract</span>
+      <span class="nav-textLogo">|</span>
+      <span class="nav-textLogo">Help Center</span>
+      <app-input-base inpPlaceholder="Search" inpType="search"
+      [inpStyle]="inputStyles"/>
+  </div>
+  <div class="nav-wrapperBtns">
+    <button class="nav-btn"
+      (click)="showSearchBar()"
+      aria-label="search"
+      title="search">
+      <img [src]="searchIcon" alt="search">
+    </button>
+    <app-hamburger-btn ariaLabel="menu mobile"
+      title="menu mobile"/>
+  </div>
+  <app-login></app-login>
+</nav>

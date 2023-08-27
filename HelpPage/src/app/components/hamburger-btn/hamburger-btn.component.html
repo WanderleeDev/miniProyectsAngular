@@ -1,0 +1,10 @@
+<button type="button" class="btnMenu"
+  [attr.aria-label]="ariaLabel || null"
+  [attr.title]="title || null">
+  <input (change)="toggleMenu()" class="btnMenu-checkbox" type="checkbox" name="hamburger-menu" />
+  <div class="btnMenu-lines">
+    <span class="btnMenu-line btnMenu-line1"></span>
+    <span class="btnMenu-line btnMenu-line2"></span>
+    <span class="btnMenu-line btnMenu-line3"></span>
+  </div>
+</button>

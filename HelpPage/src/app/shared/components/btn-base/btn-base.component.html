@@ -1,0 +1,11 @@
+  <button class="btn"
+  [ngStyle]="inpStyle"
+  [attr.title]="title || null"
+  [attr.aria-label]="ariaLabel">
+  {{inpText || null}}
+
+    <img [ngStyle]="imgStyle"
+    *ngIf="imgBtn"
+    [src]="imgBtn"
+    alt="help icon">
+</button>

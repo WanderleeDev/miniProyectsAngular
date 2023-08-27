@@ -1,0 +1,30 @@
+.helpFinder {
+  display: grid;
+  gap: 2rem;
+  background-color: var(--palette-secondary);
+  padding: 6rem 1rem;
+
+  &-wrapperInput {
+    position: relative;
+    display: grid;
+    width: min(45rem, 100%);
+    justify-self: center;
+    box-shadow: 0 5px 15px 2px #4748492d;
+    background-color: #fff;
+  }
+
+  &-input {
+    padding: 1rem;
+    border: solid 1px var(--primary-clr);
+  }
+
+  &-btn {
+    position: absolute;
+    inset: 50% .8rem auto auto;
+    transform: translateY(-50%);
+  }
+
+  &-img {
+    width: 2rem;
+  }
+}

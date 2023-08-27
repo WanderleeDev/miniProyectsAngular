@@ -1,0 +1,39 @@
+.helpCard {
+  &-imgWrapper {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    display: none;
+    @media screen and (min-width: 20rem) {
+      display: initial;
+    }
+  }
+
+  &-img {
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+
+  &-article {
+    display: grid;
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &-title {
+    font-weight: 700;
+  }
+
+  &-content {
+    font-weight: 900;
+    font-family: 'GT-America-light', sans-serif;
+  }
+
+  &-link {
+    font-size: 1.25rem;
+    color: var(--palette-primary);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

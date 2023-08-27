@@ -1,0 +1,56 @@
+@use '../../../assets/scss/functions.scss' as *;
+
+.nav {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: max(1rem, 6vw);
+  background: var(--primary-clr);
+
+  &-wrapperLogo {
+    padding-left: 3rem;
+    padding-block: 1.5rem;
+    grid-template-columns: repeat(3, max-content);
+    background: url('../../../assets/svg/i.svg') no-repeat center left;
+    background-size: 8rem;
+  }
+
+  &-textLogo {
+    &:nth-child(1) {
+      font-weight: 700;
+    }
+    font-size: toRem(25);
+    &:nth-child(2) {
+      padding-inline: .4rem;
+    }
+    &:nth-child(3) {
+      font-family: 'GT-America-light';
+      font-weight: 600;
+    }
+  }
+  &-wrapperBtns {
+    display: flex;
+    gap: .5rem;
+    @media screen and (min-width: 28rem) {
+      gap: 1rem;
+    }
+    @media screen and (min-width: 75rem) {
+      display: none;
+    }
+  }
+
+  &-btn {
+    display: none;
+    width: 2.1rem;
+    cursor: pointer;
+    transition: .2s linear transform;
+    @media screen and (min-width: 28rem) {
+      display: initial;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

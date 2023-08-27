@@ -1,0 +1,10 @@
+<label *ngIf="isViewSearchBar" class="wrapperInput" for="inpBase">
+  <input class="wrapperInput-inp"
+  id="inpBase"
+  [ngStyle]="inpStyle"
+  [type]="inpType"
+  [placeholder]="inpPlaceholder">
+
+  <button class="wrapperInput-btnClose" (click)="showSearchBar()"
+  >x</button>
+</label>

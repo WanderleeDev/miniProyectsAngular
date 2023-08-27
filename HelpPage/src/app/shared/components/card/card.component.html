@@ -1,0 +1,12 @@
+<ng-container class="helpCard">
+  <div class="helpCard-imgWrapper">
+    <img class="helpCard-img" [ngSrc]="cardData.img" fill [alt]="cardData.title">
+  </div>
+  <article class="helpCard-article">
+    <h2 class="helpCard-title">{{cardData.title}}</h2>
+    <p class="helpCard-content">{{cardData.content}}</p>
+    <a class="helpCard-link" href="#">
+      Learn More →
+    </a>
+  </article>
+</ng-container>

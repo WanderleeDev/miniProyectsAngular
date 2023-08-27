@@ -1,0 +1,67 @@
+@use '../../../assets/scss/functions.scss' as *;
+
+.btnMenu {
+  display: grid;
+  align-items: center;
+  height: toRem(62) ;
+
+  .btnMenu-checkbox {
+    height: 50%;
+    grid-area: 1/1/1/1;
+    display: block;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .btnMenu-lines {
+    grid-area: 1/1/1/1;
+    display: block;
+    height: toRem(26);
+    width: toRem(32);
+    top: toRem(17);
+    left: toRem(20);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .btnMenu-line {
+      display: block;
+      height: toRem(4);
+      width: 100%;
+      border-radius: toRem(10);
+      background: #fff;
+    }
+
+    .btnMenu-line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .btnMenu-line2 {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btnMenu-line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  input[type="checkbox"]:checked ~ .btnMenu-lines .btnMenu-line1 {
+    transform: rotate(45deg);
+  }
+
+  input[type="checkbox"]:checked ~ .btnMenu-lines .btnMenu-line2 {
+    transform: scaleY(0);
+  }
+
+  input[type="checkbox"]:checked ~ .btnMenu-lines .btnMenu-line3 {
+    transform: rotate(-45deg);
+  }
+}

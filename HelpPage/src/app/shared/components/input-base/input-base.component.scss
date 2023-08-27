@@ -1,0 +1,22 @@
+.wrapperInput {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 90% 10%;
+  padding: 1.25rem;
+  background-color: var(--secondary-clr);
+  z-index: 10;
+
+  &-inp{
+    color: var(--primary-clr);
+  }
+
+  &-btnClose{
+    width: 2rem;
+    justify-self: center;
+    color: var(--primary-clr);
+    font-weight: 900;
+    cursor: pointer;
+  }
+}

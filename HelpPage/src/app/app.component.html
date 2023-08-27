@@ -1,0 +1,21 @@
+<ng-container>
+  <app-navbar />
+  <app-help-finder />
+  <app-gallery-help />
+  <app-footer />
+  <app-btn-base
+  title="Help options"
+  ariaLabel="Help options"
+  [imgBtn]="imgBtnHelp"
+  [inpStyle]="{
+    'background-color' : 'var(--palette-primary)',
+    'position': 'fixed',
+    'z-index': '10',
+    'bottom': '1rem',
+    'right': '2rem',
+    'border-radius' : '50%',
+    'width': '4rem',
+    'height': '4rem',
+    'padding': '1.2rem'
+  }"/>
+</ng-container>

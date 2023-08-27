@@ -1,0 +1,16 @@
+<ng-container>
+  <h3 class="titleList">{{listItem?.title}}</h3>
+  <ul class="list">
+    <li class="list-item" *ngFor="let item of listItem?.list">
+      <a class="list-link" href="#" rel="noopener noreferrer">{{item}}</a>
+    </li>
+  </ul>
+  <div class="subList" *ngIf="listItem?.secondList">
+    <h4 class="subList-title">{{listItem?.secondList?.subTitle}}</h4>
+    <ul *ngFor="let item of listItem?.secondList?.subList">
+      <li class="list-item">
+        <a class="list-link" href="#" rel="noopener noreferrer" href="#">{{item}}</a>
+      </li>
+    </ul>
+  </div>
+</ng-container>

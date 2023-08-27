@@ -1,0 +1,27 @@
+.galleryHelp {
+  display: grid;
+  align-items: start;
+  padding: 1rem;
+  @media screen and (min-width: 56.25rem) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 3rem;
+    padding: 5rem 1rem;
+  }
+}
+
+.app-card {
+  width: min(33rem, 100%);
+  display: grid;
+  gap: 2rem;
+  padding-top: 3.125rem;
+  margin: auto;
+  @media screen and (min-width: 20rem) {
+    grid-template-columns: 6rem 1fr;
+  }
+  @media screen and (min-width: 56.25rem) {
+    margin: initial;
+    &:nth-child(odd) {
+      justify-self: end;
+    }
+  }
+}

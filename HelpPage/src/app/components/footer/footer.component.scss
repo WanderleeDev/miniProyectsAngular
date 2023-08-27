@@ -1,0 +1,22 @@
+.footer {
+  display: grid;
+  background-color: var(--primary-clr);
+  padding: 3rem 1rem;
+  gap: 2rem;
+  @media screen and (min-width: 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 66rem) {
+    grid-template-columns: 1fr 25%;
+    padding: 3rem 4rem 6rem;
+  }
+
+  &-listWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @media screen and (min-width: 62.5rem) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

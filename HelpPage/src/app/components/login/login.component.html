@@ -1,0 +1,7 @@
+<div *ngIf="hasMenuOpen" class="login">
+  <app-btn-base
+  *ngFor="let text of textBtns"
+  [inpStyle]="stylesBtn"
+  [inpText]="text"
+  />
+</div>
