@@ -2,4 +2,7 @@
   font-size: 3.5rem;
   text-align: center;
   color: var(--primary-clr);
+  @media screen and (min-width: 56.25rem) {
+    font-size: 4.5rem;
+  }
 }

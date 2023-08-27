@@ -1,7 +1,8 @@
 <div *ngIf="hasMenuOpen" class="login">
   <app-btn-base
-  *ngFor="let text of textBtns"
+  *ngFor="let text of textBtns; let i = index"
   [inpStyle]="stylesBtn"
   [inpText]="text"
+  [ariaLabel]="listTextBtn[i]"
   />
 </div>

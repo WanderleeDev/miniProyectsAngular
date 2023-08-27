@@ -1,11 +1,12 @@
 .galleryHelp {
   display: grid;
   align-items: start;
-  padding: 1rem;
+  gap: 2rem;
+  padding: 3rem 1rem;
   @media screen and (min-width: 56.25rem) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 3rem;
-    padding: 5rem 1rem;
+    gap: 3rem 3rem;
+    padding: 7rem 1rem;
   }
 }
 

@@ -7,4 +7,12 @@
   inset: auto 0 0 0;
   transform: translateY(100%);
   background: var(--primary-clr);
+  @media screen and (min-width: 75rem) {
+    display: flex;
+    gap: 1rem;
+    height: initial;
+    border-top: initial;
+    position: initial;
+    transform: initial;
+  }
 }

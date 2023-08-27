@@ -10,12 +10,16 @@ import { OpenMenuService } from 'src/app/services/openMenu/open-menu.service';
 export class LoginComponent implements OnInit, OnDestroy {
   private subscription!: Subscription;
   hasMenuOpen?: boolean;
+  listTextBtn = [
+    'Submit request',
+    'Sign in'
+  ]
   textBtns = [
     'Submit a request',
     'Sign in'
   ]
   stylesBtn: {[key: string] : string} = {
-    'width': '300px',
+    'width': 'min(19rem, 100%)',
     'cursor': 'pointer',
     'padding': '1rem 2rem'
   }
