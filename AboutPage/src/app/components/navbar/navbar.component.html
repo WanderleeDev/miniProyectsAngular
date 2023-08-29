@@ -1,0 +1,28 @@
+<nav class="navPage">
+  <div class="navPage-wrapperLogo"
+  [ngClass]="{'changeColor': isOpenMenu}">
+    <app-logo />
+    <button (click)="showMenu($event)" class="navPage-btn"
+    [attr.aria-expanded]="isOpenMenu">Menu </button>
+  </div>
+  <ul class="navPage-list"
+  [ngClass]="{'showMenu': isOpenMenu}">
+    <li>
+      <app-list [listContent]="firstList"
+      [showBtn]="true"/>
+    </li>
+    <li>
+      <app-login-box />
+    </li>
+    <li class="navPage-item">
+      <div >
+        <h2 class="navPage-subTitle">Mare on Ableton.com</h2>
+        <app-list [listContent]="secondList"
+        [styleList]="{
+          'font-Size': '0.7rem',
+        }"/>
+      </div>
+        <app-sub-list [subListData]="thirdList" />
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,9 @@
+<ng-container>
+  <h2 class="subTitle">{{subListData?.title}}</h2>
+  <ul class="subList">
+    <li class="subList-item" *ngFor="let list of subListData?.listContent">
+      <h3 class="subList-itemTitle">{{list.subTitle}}</h3>
+      <p class="subList-itemDescription">{{list.content}}</p>
+    </li>
+  </ul>
+</ng-container>

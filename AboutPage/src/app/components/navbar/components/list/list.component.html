@@ -1,0 +1,16 @@
+<ul class="list">
+  <li *ngFor="let li of listContent"
+  class="list-item"
+  [ngStyle]="styleList">
+    <a href="#" [attr.aria-label]="li" >{{li}}</a>
+  </li>
+  <li *ngIf="showBtn"
+  class="wrapperBtn">
+    <button class="wrapperBtn-btn" aria-label="More options">
+      More
+      <span>
+        ✚
+      </span>
+    </button>
+  </li>
+</ul>
