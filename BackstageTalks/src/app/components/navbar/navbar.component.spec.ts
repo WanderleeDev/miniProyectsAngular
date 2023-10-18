@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardBtnsComponent } from './card-btns.component';
+import { NavbarComponent } from './navbar.component';
 
-describe('CardBtnsComponent', () => {
-  let component: CardBtnsComponent;
-  let fixture: ComponentFixture<CardBtnsComponent>;
+describe('NavbarComponent', () => {
+  let component: NavbarComponent;
+  let fixture: ComponentFixture<NavbarComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CardBtnsComponent]
+      declarations: [NavbarComponent]
     });
-    fixture = TestBed.createComponent(CardBtnsComponent);
+    fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { IDataImg } from 'src/app/interface/IDataImg.interface';
+// services
+import { BooksService } from 'src/app/services/books.service';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html'
 })
 export class SliderComponent {
-  sliderImgs: string[] = [
-    '../../../assets/img/backstagetalks.webp',
-    '../../../assets/img/backstagetalks2.webp',
-    '../../../assets/img/backstagetalks3.webp',
-    '../../../assets/img/backstagetalks4.webp',
-    '../../../assets/img/backstagetalks5.webp',
-    '../../../assets/img/backstagetalks6.webp',
-    '../../../assets/img/backstagetalks7.webp'
-  ]
+  sliderImgs!: IDataImg[];
+
+  constructor (booksService: BooksService){
+    this.sliderImgs =  booksService.getBooksData()
+  }
 }

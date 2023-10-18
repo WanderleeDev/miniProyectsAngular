@@ -1,17 +1,28 @@
-<figure class="relative w-[26.5rem] h-[33.25rem] object-cover">
-  <img  class="aspect-[2/4]" [ngSrc]="img" alt="" fill>
-  <figcaption></figcaption>
-  <div>
-    <p>
-      <a href="" rel="noopener noreferrer"></a>
-      <span></span>
-    </p>
-    <p>
-      <a href="" rel="noopener noreferrer"></a>
-      <span></span>
-    </p>
-    <p>
-      <a href="" rel="noopener noreferrer"></a>
+<figure [id]="dataImg.id" class="relative w-[15.5rem] h-[22.25rem] sm:w-[26.5rem] sm:h-[33.25rem] object-cover">
+  <img
+  [ngSrc]="dataImg.img!"
+  [alt]="dataImg.title" fill>
+  <div class="absolute bottom-0 translate-y-full left-2/4 -translate-x-2/4 text-center w-full">
+    <figcaption>{{dataImg.title}}</figcaption>
+
+    <div class="py-6">
+      <p *ngFor="let anchor of dataImg.link">
+        <a class="text-white"
+        [href]="anchor?.url"
+        rel="noopener noreferrer">
+          {{anchor?.link}}
+        </a>
+        <span *ngIf="anchor?.text" class="px-2">{{anchor?.text}}</span>
+      </p>
+    </div>
+
+    <p >
+      {{ dataImg.linkStore?.text }}
+      <a class="text-white"
+      [href]="dataImg.linkStore?.url"
+      rel="noopener noreferrer">
+        {{dataImg.linkStore?.link}}
+      </a>
     </p>
   </div>
 </figure>

@@ -7,6 +7,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { ImgSliderComponent } from './components/img-slider/img-slider.component';
 import { MainTitleComponent } from './components/main-title/main-title.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SliderComponent,
     ImgSliderComponent,
     MainTitleComponent,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
