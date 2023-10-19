@@ -1,7 +1,11 @@
-<nav>
+<nav class="hidden lg:block absolute bottom-0 right-0 font-light">
   <ul>
-    <!-- <li *ngFor="let li of '7'">
-      <a id="">{{li}}</a>
-    </li> -->
+    <li *ngFor="let anchor of listId, index as i">
+      <a class="slideLink"
+        [href]="['#issue', i+1].join('')"
+        [attr.data-id]="'issue' + (i+1)">
+        {{anchor}}
+      </a>
+    </li>
   </ul>
 </nav>

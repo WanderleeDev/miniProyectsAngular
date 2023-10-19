@@ -1,7 +1,9 @@
-<figure [id]="dataImg.id" class="relative w-[15.5rem] h-[22.25rem] sm:w-[26.5rem] sm:h-[33.25rem] object-cover">
+<figure class="relative w-[15.5rem] h-[22.25rem] sm:w-[26.5rem] sm:h-[33.25rem] object-cover">
   <img
+    [id]="'issue'+ slideNumber"
     #myImage
     [attr.data-color]="dataImg.color"
+    [attr.data-for]="'issue' + slideNumber"
     [ngSrc]="dataImg.img!"
     [alt]="dataImg.title" fill>
   <div class="absolute bottom-0 translate-y-full left-2/4 -translate-x-2/4 text-center w-full">
@@ -10,8 +12,9 @@
     <div class="py-6">
       <p *ngFor="let anchor of dataImg?.link">
         <a class="text-white"
-        [href]="anchor?.url"
-        rel="noopener noreferrer">
+          [class.text-pink]="slideNumber === 2"
+          [href]="anchor?.url"
+          rel="noopener noreferrer">
           {{anchor?.link}}
         </a>
         <span *ngIf="anchor?.text" class="px-2">{{anchor?.text}}</span>
@@ -21,8 +24,9 @@
     <p >
       {{ dataImg.linkStore?.text }}
       <a class="text-white"
-      [href]="dataImg.linkStore?.url"
-      rel="noopener noreferrer">
+        [class.text-pink]="slideNumber === 2"
+        [href]="dataImg.linkStore?.url"
+        rel="noopener noreferrer">
         {{dataImg.linkStore?.link}}
       </a>
     </p>

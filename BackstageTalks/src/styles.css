@@ -21,4 +21,8 @@
       background-color: #f2f2f200; /* Color de la pista del scroll */
     }
   }
+
+  .text-pink {
+    color: #E568AC;
+  }
 }
