@@ -1,12 +1,14 @@
 <figure [id]="dataImg.id" class="relative w-[15.5rem] h-[22.25rem] sm:w-[26.5rem] sm:h-[33.25rem] object-cover">
   <img
-  [ngSrc]="dataImg.img!"
-  [alt]="dataImg.title" fill>
+    #myImage
+    [attr.data-color]="dataImg.color"
+    [ngSrc]="dataImg.img!"
+    [alt]="dataImg.title" fill>
   <div class="absolute bottom-0 translate-y-full left-2/4 -translate-x-2/4 text-center w-full">
     <figcaption>{{dataImg.title}}</figcaption>
 
     <div class="py-6">
-      <p *ngFor="let anchor of dataImg.link">
+      <p *ngFor="let anchor of dataImg?.link">
         <a class="text-white"
         [href]="anchor?.url"
         rel="noopener noreferrer">
