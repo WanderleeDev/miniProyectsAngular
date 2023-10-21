@@ -1,0 +1,12 @@
+<div class="grid gap-10 px-4 sm:px-8">
+  <div class="grid gap-10"
+    role="searchbox">
+    <app-search-box />
+    <app-dropdown-filter />
+  </div>
+  <div class="grid gap-16 grid-cols-[repeat(auto-fit,minmax(min(15.5rem,100%),1fr))]"
+    role="grid">
+    <app-card-flag *ngFor="let country of countries"
+      [dataCountry]="country"/>
+  </div>
+</div>

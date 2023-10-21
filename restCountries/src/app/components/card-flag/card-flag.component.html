@@ -1,0 +1,32 @@
+<figure role="contentinfo"
+  class="max-w-xs mx-auto sm:w-card bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+>
+  <a class="relative block h-36 md:h-44"
+    [routerLink]="['flag/',dataCountry.name.common]"
+    rel="noopener noreferrer">
+    <img class="rounded-t-lg aspect-video"
+      [ngSrc]="dataCountry.flags.png"
+      [alt]="dataCountry.name.common"
+      fill />
+  </a>
+  <div class="p-5">
+    <figcaption
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      {{dataCountry.name.common}}
+    </figcaption>
+    <div class="grid gap-1">
+      <p class="flex gap-1">
+        <span>Population:</span>
+        <span>{{dataCountry.population}}</span>
+      </p>
+      <p class="flex gap-1">
+        <span>Region:</span>
+        <span>{{dataCountry.region}}</span>
+      </p>
+      <p class="flex gap-1">
+        <span>Capital:</span>
+        <span>{{dataCountry.capital[0]}}</span>
+      </p>
+    </div>
+  </div>
+</figure>

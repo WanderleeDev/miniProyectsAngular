@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-clr: #FFFFFF;
+    --letter-clr: #0D0E10;
+    --basic-white2: #FAFAFA;
+    --base-color: #2B3743;
+    --base-color2: #202D36;
+    --letter-color: #FBFFFF;
+    --letter-color-light: #D3DDE1;
+    --letter-color-extraLight: #8D98A3;
+  }
+}
+
+@layer utilities {
+  w-card {
+    width: min(15.5rem,100%);
+  }
+  .dark {
+    --primary-clr: #2B3743;
+    --letter-clr: #FCFFFF;
+  }
+}
