@@ -34,11 +34,13 @@ export class FlagSectionComponent  implements OnInit{
             ? (this.dataCountry = res, console.log(res)
             )
             : this.returnBack()
-        }
+        },
+        error: () => console.log('Error al conseguir los datos')
+
       })
   }
 
   public returnBack ():void {
-    this.router.navigateByUrl('')
+    this.router.navigateByUrl('');
   }
 }

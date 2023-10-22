@@ -51,7 +51,12 @@ export interface CoatOfArms {
 }
 
 export interface Currencies {
-  SDG: Sdg;
+  ILS: ILS;
+}
+
+export interface ILS {
+  name: string;
+  symbol: string;
 }
 
 export interface Sdg {

@@ -21,6 +21,11 @@ const routes: Routes = [
     title: 'Flag'
   },
   {
+    path: 'aplha/:id',
+    component: FlagSectionComponent,
+    title: 'Flag'
+  },
+  {
     path: '**',
     component: NotFoundComponent,
     title: 'Not Found'
