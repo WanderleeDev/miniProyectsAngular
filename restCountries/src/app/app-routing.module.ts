@@ -7,11 +7,11 @@ import { NotFoundComponent } from './views/not-found/not-found.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
     title: 'Countries'
   },

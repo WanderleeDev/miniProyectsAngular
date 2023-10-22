@@ -1,1 +1,14 @@
-<p>flag-section works!</p>
+<section *ngFor="let country of dataCountry"
+  class="text-white grid">
+  <button aria-label="return back"
+    (click)="returnBack()"
+    type="button">
+    Back
+  </button>
+  <div class="relative w-48 h-32">
+    <img [ngSrc]="country.flags.svg"
+      [alt]="country.name.common"
+      priority fill >
+  </div>
+  <h2>{{country.name.common}}</h2>
+</section>

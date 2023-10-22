@@ -1,11 +1,11 @@
 <div class="grid gap-10 px-4 sm:px-8">
-  <div class="grid gap-10"
+  <div class="grid gap-10 md:grid-cols-2"
+    aria-label="searchbox"
     role="searchbox">
     <app-search-box />
-    <app-dropdown-filter />
+    <app-dropdown-filter class="md:justify-self-end"/>
   </div>
-  <div class="grid gap-16 grid-cols-[repeat(auto-fit,minmax(min(15.5rem,100%),1fr))]"
-    role="grid">
+  <div class="grid gap-16 grid-cols-[repeat(auto-fit,minmax(min(15.5rem,100%),1fr))]">
     <app-card-flag *ngFor="let country of countries"
       [dataCountry]="country"/>
   </div>

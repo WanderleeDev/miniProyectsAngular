@@ -1,13 +1,16 @@
 <figure role="contentinfo"
-  class="max-w-xs mx-auto sm:w-card bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  class="max-w-xs mx-auto sm:w-card border rounded-lg shadowbg-[var(--primary-clr)]  dark:border-gray-700 bg-[var(--primary-clr)] dark:bg-[var(--base-color)]"
 >
   <a class="relative block h-36 md:h-44"
     [routerLink]="['flag/',dataCountry.name.common]"
+    [title]="'more info of ' + dataCountry.name.common"
+    [attr.aria-label]="'more info of ' + dataCountry.name.common"
     rel="noopener noreferrer">
-    <img class="rounded-t-lg aspect-video"
+    <img class="rounded-t-lg"
       [ngSrc]="dataCountry.flags.png"
       [alt]="dataCountry.name.common"
-      fill />
+      fill
+      priority/>
   </a>
   <div class="p-5">
     <figcaption
@@ -16,16 +19,16 @@
     </figcaption>
     <div class="grid gap-1">
       <p class="flex gap-1">
-        <span>Population:</span>
-        <span>{{dataCountry.population}}</span>
+        <span class="font-medium dark:text-white">Population:</span>
+        <span class="text-gray-500 dark:text-gray-300">{{dataCountry.population| number: '1.0'}}</span>
       </p>
       <p class="flex gap-1">
-        <span>Region:</span>
-        <span>{{dataCountry.region}}</span>
+        <span class="font-medium dark:text-white">Region:</span>
+        <span class="text-gray-500 dark:text-gray-300">{{dataCountry.region}}</span>
       </p>
       <p class="flex gap-1">
-        <span>Capital:</span>
-        <span>{{dataCountry.capital[0]}}</span>
+        <span class="font-medium dark:text-white">Capital:</span>
+        <span *ngIf="dataCountry.capital?.[0]" class="text-gray-500 dark:text-gray-300">{{dataCountry.capital[0] }}</span>
       </p>
     </div>
   </div>
