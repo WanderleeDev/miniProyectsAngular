@@ -1,0 +1,38 @@
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  font-size: 1rem;
+
+  li:nth-child(3) {
+    display: none;
+  }
+
+  a, button {
+    text-transform: capitalize;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    transition: background-color .2s linear;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.116)
+    }
+  }
+
+  button {
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+  }
+}
+
+.activeLink{
+  background-color: rgba(0, 0, 0, 0.116);
+  border: solid .15rem rgba(255, 255, 255, 0.8);
+}

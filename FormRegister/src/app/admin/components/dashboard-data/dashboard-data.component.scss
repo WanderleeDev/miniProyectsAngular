@@ -1,0 +1,43 @@
+.dashBoard {
+  position: relative;
+  overflow-x: auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  @media screen and (min-width: 37.5rem) {
+    border-radius: .3rem;
+  }
+
+  &-table {
+    width: 100%;
+    text-align: left;
+    color: rgb(211, 211, 211);
+    // table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  &-thead {
+    text-transform: uppercase;
+    background-color: gray;
+    th {
+      padding: 1.25rem .75rem;
+      background-color: rgb(4, 27, 75);
+    }
+  }
+
+  &-tbody {
+    tr{
+      background-color: white;
+      color: white;
+      th{
+        padding: 1.25rem .75rem;
+        background-color: #0c93e7;
+      }
+      td{
+        font-size: .9rem;
+        letter-spacing: .1rem;
+        background-color: #bfe7ff;
+        color: rgb(99, 98, 98);
+        padding: 1.25rem .75rem;
+      }
+    }
+  }
+}

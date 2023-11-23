@@ -1,0 +1,21 @@
+.wrapper-userBtn {
+  position: fixed;
+  top: 6rem;
+  right: 1rem;
+}
+
+.userBtn {
+  display: block;
+  position: relative;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px .2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: box-shadow linear .2s;
+  &:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px .4rem;
+  }
+  &:focus-within {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px .4rem;
+  }
+}

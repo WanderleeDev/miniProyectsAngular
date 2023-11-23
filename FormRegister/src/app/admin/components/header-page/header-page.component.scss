@@ -1,0 +1,16 @@
+header {
+  background-color: blueviolet;
+  display: flex;
+  gap: 2rem;
+  flex-flow: wrap;
+  padding: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    gap: .5rem;
+  }
+}

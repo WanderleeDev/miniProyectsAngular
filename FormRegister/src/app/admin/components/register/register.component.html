@@ -1,0 +1,34 @@
+<div class="form-container">
+  <h2>Sign Up</h2>
+  <form class="form" [formGroup]="myForm" (ngSubmit)="registerUser()" #form="ngForm">
+    <div class="form-group">
+      <label for="email">
+        Email
+      </label>
+      <input type="email"  id="email" name="email" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="password">
+        Password
+      </label>
+      <input type="password"  id="password" name="password" formControlName="password">
+    </div>
+
+    <div class="privacy">
+      <label for="privacy">Accept term and conditions</label>
+      <input type="checkbox" name="privacy" id="privacy">
+    </div>
+
+    <div class="form-controls">
+      <button [disabled]="form.invalid"
+        type="submit"
+        class="form-submit-btn">
+        Submit
+      </button>
+      <a routerLink="../login">
+        I already have an account
+      </a>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="imgSelector">
+  <img class="imgSelector-avatar" [src]="avatarImg" alt="photo">
+  <label class="imgSelector-btnChange"
+    title="change photo"
+    aria-label="change photo"
+    for="input-img">
+    <input
+      #imgChanger
+      (change)="onImageSelected($event)"
+
+      type="file"
+      name="input-img"
+      id="input-img">
+  </label>
+</div>

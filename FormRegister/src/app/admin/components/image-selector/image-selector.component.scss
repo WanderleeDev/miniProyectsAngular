@@ -1,0 +1,45 @@
+.imgSelector {
+  position: relative;
+  background-color: white;
+
+  &:hover .profile-btnChange {
+    opacity: 1;
+  }
+
+  &-avatar {
+    width: clamp(7rem, 20vw, 15rem);
+    height: clamp(7rem, 20vw, 15rem);
+    display: block;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+
+  &-btnChange {
+    position: absolute;
+    bottom: -.3rem;
+    right: .5rem;
+    height: 2rem;
+    width: 2rem;
+    background: url('../../../../assets/add-circle-svgrepo-com.svg') no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    transition: transform linear .2s, opacity linear .2s ;
+    cursor: pointer;
+
+    &:hover {
+    transform: scale(.9);
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+
+    & input {
+      display: none;
+    }
+  }
+}
+

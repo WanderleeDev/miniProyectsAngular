@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h2>Login</h2>
+  <form class="form"
+    [formGroup]="formLogin"
+    (submit)="loginUser()">
+
+    <div *ngFor="let field of formLogin.controls| keyvalue"
+      class="form-group">
+      <label [for]="field.key">
+        {{field.key | titlecase}}
+      </label>
+      <input [formControlName]="field.key"
+        [name]="field.key"
+        [type]="field.key"
+        [id]="field.key">
+    </div>
+
+    <div class="form-controls">
+      <button
+        [disabled]="formLogin.invalid"
+        type="submit"
+        aria-label="login user"
+        class="form-submit-btn">
+        Submit
+      </button>
+      <a routerLink="/register"
+        aria-label="go to register">
+        Sign up for the app
+      </a>
+    </div>
+  </form>
+</div>
